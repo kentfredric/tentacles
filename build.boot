@@ -19,7 +19,8 @@
  pom {:project (get-env :project)
        :version (get-env :version)
        :description "A library for working with the Github API."
-       :url "https://github.com/irresponsible/tentacles"
+       :url (str "https://github.com/" (get-env :project))
+       :scm {:url (str "https://github.com/" (get-env :project))}
        :license {"Eclipse Public License" "http://www.eclipse.org/legal/epl-v10.html"}}
  push {:tag true
        :ensure-branch "master"
