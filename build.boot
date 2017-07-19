@@ -8,10 +8,6 @@
                  [org.clojure/data.codec "0.1.0"]
                  [environ "1.1.0"]
                  [adzerk/boot-test "1.2.0" :scope "test"]]
-  :repositories #(conj % ["clojars" {:url "https://clojars.org/repo/"
-                                   :username (System/getenv "CLOJARS_USER")
-                                   :password (System/getenv "CLOJARS_PASS")
-  }])
 )
  
 (require '[adzerk.boot-test :as t])
