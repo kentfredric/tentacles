@@ -1,16 +1,21 @@
 ; vim: syntax=clojure
+(set-env! :dependencies (cond
+  (= "1.8.0" (System/getenv "BOOT_CLOJURE_VERSION"))
+    '[[org.clojure/clojure "1.8.0" :scope "provided"]]
+  :else
+    '[[org.clojure/clojure "1.9.0-alpha17" :scope "provided"]]))
+
 (set-env!
  :project 'irresponsible/tentacles
  :version "0.6.2"
  :source-paths   #{"src"}
  :resource-paths #{"src" "resources"}
- :dependencies '[[org.clojure/clojure "1.9.0-alpha17" :scope "provided"]
-                 [clj-http "3.6.1"]
+ :dependencies #(into % '[[clj-http "3.6.1"]
                  [cheshire "5.7.1"]
                  [com.cemerick/url "0.1.1"]
                  [org.clojure/data.codec "0.1.0"]
                  [environ "1.1.0"]
-                 [adzerk/boot-test "1.2.0" :scope "test"]]
+                 [adzerk/boot-test "1.2.0" :scope "test"]])
 )
  
 (require '[adzerk.boot-test :as t])
