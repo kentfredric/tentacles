@@ -1,4 +1,6 @@
 (set-env!
+ :project 'irresponsible/tentacles
+ :version "0.6.2"
  :source-paths   #{"src"}
  :resource-paths #{"src" "resources"}
  :dependencies '[[org.clojure/clojure "1.9.0-alpha15" :scope "provided"]
@@ -13,8 +15,8 @@
 (require '[adzerk.boot-test :as t])
 
 (task-options!
- pom '{:project irresponsible/tentacles
-       :version "0.6.2"
+ pom {:project (get-env :project)
+       :version (get-env :version)
        :description "A library for working with the Github API."
        :url "https://github.com/irresponsible/tentacles"
        :license {"Eclipse Public License" "http://www.eclipse.org/legal/epl-v10.html"}}
