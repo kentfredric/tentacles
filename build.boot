@@ -1,3 +1,4 @@
+; vim: syntax=clojure
 (set-env!
  :project 'irresponsible/tentacles
  :version "0.6.2"
