@@ -6,7 +6,7 @@
  :resource-paths #{"src" "resources"}
  :dependencies '[[org.clojure/clojure "1.9.0-alpha17" :scope "provided"]
                  [clj-http "3.6.1"]
-                 [cheshire "5.7.0"]
+                 [cheshire "5.7.1"]
                  [com.cemerick/url "0.1.1"]
                  [org.clojure/data.codec "0.1.0"]
                  [environ "1.1.0"]
